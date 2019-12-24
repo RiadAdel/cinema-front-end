@@ -1,0 +1,35 @@
+nav{
+    height: 10vh !important;
+}
+.bg-custom{
+    background-color: var(--my-background);
+}
+
+nav .navbar-brand{
+    color: var(--my-primaryVariant) !important;
+    font-weight: bold;
+    font-size: x-large;
+}
+nav .navbar-nav li div{
+    color: white !important;
+    cursor: pointer;
+    opacity: 60%;
+    transition: 0.5s;
+}
+nav .navbar-nav li div:hover{
+    opacity: 100%;
+}
+
+nav button{
+    background-color: var(--my-primaryVariant) !important;
+    color:  var(--my-onBackground) !important;
+    transition: 1;
+}
+
+nav .navbar-right li div:hover{
+    text-decoration: underline;
+}
+
+Link:hover{
+    text-decoration: none;
+}

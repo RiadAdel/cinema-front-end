@@ -1,0 +1,15 @@
+:root {
+    --my-primary: #580000;
+    --my-primaryVariant: #D32F2F;
+    --my-onPrimary: #DDD;
+    --my-secondary: rgb(17, 172, 151);
+    --my-secondaryVariant: #64FFDA;
+    --my-onSecondary: #222;
+    --my-active:#EEE;
+    --my-background: #212121;
+    --my-onBackground: #FAFAFA;
+    --my-surface: #161616;
+    --my-onSurface: #FFF;
+    --my-onWarning: #FC0;
+    --my-onError: #C00;
+}
