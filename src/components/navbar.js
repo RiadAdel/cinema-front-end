@@ -22,7 +22,9 @@ export default class Navbar extends React.Component {
                 <ul className="nav navbar-nav navbar-right">
                     <li className="dropdown">
                         <h6 className ="text-light">{this.props.username+", "}
-                            <span className = "text-secondary btn p-0 m-0" style={{textDecoration:'underline'}}>sign out</span>
+                            <span className = "text-secondary btn p-0 m-0" style={{textDecoration:'underline'}}
+                                onClick = {this.props.signout?this.props.signout:null}
+                            >sign out</span>
                         </h6>
                     </li>
                 </ul>

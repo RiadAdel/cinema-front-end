@@ -45,12 +45,11 @@ export default class SignUp extends React.Component {
         this.setState({passwordConfirm:event.target.value});
     }
     handleToken(user){
-        if(this.props.token)
+        if(this.props.handleToken)
             this.props.handleToken(user)
     }
     handleSubmit(event){
         event.preventDefault();
-        console.log("Hello")
         if(this.state.password !== this.state.passwordConfirm){
             alert('password does not match');
             return
@@ -63,7 +62,6 @@ export default class SignUp extends React.Component {
             birthdate:this.state.birthdate,
             password:this.state.password,
         }
-        console.log(user)
         fetch("/api/register", {
             method: 'post',
             body: JSON.stringify(user),
@@ -72,12 +70,11 @@ export default class SignUp extends React.Component {
             }
         }).then((data) => data.json()).then(
             data=>{
-                console.log(data)
                 if(data.success){
                     let user = {
                         username:this.state.username,
                         type:"Customer",
-                        apiToken:data.success.token,
+                        token:data.success.token,
                     }
                     this.handleToken(user);
                 }

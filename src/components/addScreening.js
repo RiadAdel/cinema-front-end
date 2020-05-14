@@ -56,7 +56,6 @@ export default class AddScreening extends React.Component {
             onChange = {e=>{
                 this.movie = this.state.movies.find(x=> (x.id).toString()===e.target.value);
                 this.setState({movie:e.target.value});
-                console.log(e.target.value,this.movie)
             }}>
                 <option disabled value = {0} key={0} >Movies</option>
                 {

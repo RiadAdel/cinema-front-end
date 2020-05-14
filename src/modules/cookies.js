@@ -7,7 +7,7 @@ const setUserCookies = (user) =>{
         }
      }
 }
-const getUserCookies = (keys = ["apiToken","type","username"]) =>{
+const getUserCookies = (keys = ["token","type","username"]) =>{
     let userCookies = {};
     keys.forEach(element => {
         userCookies[element] = Cookies.get(element);
@@ -15,12 +15,10 @@ const getUserCookies = (keys = ["apiToken","type","username"]) =>{
     return userCookies;
 }
 
-const removeUserCookies = (user) =>{
-    for (let key in user){
-        if(user.hasOwnProperty(key)){
-            Cookies.remove(key)
-        }
-     }
+const removeUserCookies = (keys = ["token","type","username"]) =>{
+    keys.forEach(element => {
+        Cookies.remove(element);
+    });
 }
 
 export {removeUserCookies,setUserCookies,getUserCookies};

@@ -12,14 +12,12 @@ export default class MovieShowScreen extends React.Component {
     componentDidMount() {
         if (this.props.location.state) {
             this.setState({ movie: this.props.location.state.movie })
-            console.log(this.props.location.state)
             fetch('/api/screening?id='+this.props.location.state.movie.id).then(
                 res => res.json()
             ).then(
                 data => {
                     let screenings = data.hall.map((screening)=>(screening.pivot));
                     this.halls = data.hall;
-                    console.log('screening',data.hall)
                     this.setState({screenings})
                 }
             )

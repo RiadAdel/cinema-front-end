@@ -1,7 +1,6 @@
 import React from 'react';
 export default class ReservationCard extends React.Component {
     render() {
-        console.log("reservation props",this.props)
         return (
             <div className="my-1 py-4" style={{ backgroundColor: '#EEE' }}>
                 <div className="row m-0 px-5 justify-content-between align-items-center">

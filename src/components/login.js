@@ -45,15 +45,8 @@ export default class Login extends React.Component {
         )
     }
     handleToken(user) {
-        console.log(user)
         if(this.props.handleToken)
             this.props.handleToken(user);
-        // Cookies.set('apiToken', user.token)
-        // Cookies.set('type', user.type)
-        // Cookies.set('username', user.username)
-        // console.log(Cookies.get('username'))
-        //this.setState({notSigned:true,done:false,username:"",password:""});
-        //this.props.handleToken(user);
     }
     render() {
         return (

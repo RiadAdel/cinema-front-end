@@ -24,14 +24,12 @@ export default class Slideshow extends React.Component {
         if (!this.props.slides)
             return null;
         return this.props.slides.map((slide, i) => {
-            console.log("test" + (i === 0) ? "help" : "no")
             return (
                 <div key={i} className={(i === 0) ? "carousel-item active" : "carousel-item"}>
                     <img className="d-block w-100" src={slide.img} alt="First slide" />
 
                     <div className="carousel-caption d-none d-md-block">
                         <h5>{slide.name}</h5>
-                        <p>{slide.description}</p>
                     </div>
                 </div>
 
